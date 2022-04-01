@@ -1,0 +1,19 @@
+<div class="serverInfo">
+    <label style="font-weight: bold;">Server ID:</label> <p>{{ id }} </p>
+    <label style="font-weight: bold;">Server Name:</label> <p *ngIf="!edit">{{ name }} </p><input *ngIf="edit" value="{{name}}" [(ngModel)]="name">
+    <label style="font-weight: bold;">Server Location:</label> <p *ngIf="!edit">{{ location }}</p><input *ngIf="edit" value="{{location}}" [(ngModel)]="location">
+    <label style="font-weight: bold;">Server IP Address:</label> <p *ngIf="!edit">{{ ipAddress }}</p><input *ngIf="edit" value="{{ipAddress}}" [(ngModel)]="ipAddress">
+    <label style="font-weight: bold;">Server Uptime:</label> <p><cd-timer #basicTimer></cd-timer></p>
+    <label style="font-weight: bold;">Server Status:</label> <p>{{ status }}</p>
+</div>
+
+<div class="buttons">
+    <button (click)="startServer()">Start</button>
+    <button (click)="stopServer()">Stop</button>
+    <button (click)="resetServer()">Reset</button>
+    <hr>
+    <button *ngIf="!edit" (click)="editServer()">Edit</button>
+    <button *ngIf="edit" (click)="submitEdit()">Done</button>
+    <button>Delete</button>
+</div>
+
