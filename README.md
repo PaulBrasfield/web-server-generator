@@ -1,4 +1,7 @@
-# MyFirstApp
+# Web Server Generator
+
+A web server generator project built with Angular. You can name the server, set its location and IP Address, as well as start, stop, and reset the server.
+You may also edit the information for the server, in which the server is automatically stopped to avoid simulated data loss.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
